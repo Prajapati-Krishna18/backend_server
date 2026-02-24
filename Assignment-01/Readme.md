@@ -31,6 +31,10 @@
     => 4. Start the Server
     node index.js (file_name)
 
-## Deployed Links
+## Postman Link
+
+    => https://documenter.getpostman.com/view/50840969/2sBXcGCyrp
+
+## Deployed Link
 
 => https://backend-server-283t.onrender.com/
