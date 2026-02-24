@@ -9,7 +9,7 @@ const students = [
         branch: "CSE",
         semester: 8,
         cgpa: 9.3,
-        averageCGPA: 7.12
+        averageCGPA: 8.9
     },
     {
         id: 2,
@@ -109,18 +109,16 @@ app.get("/students/average", (req, res) => {
         return res.status(404).json({ message: "User not found" });
     }
 
-    const average = students.map(student => ({
-        ID: student.id,
-        NAME: student.name,
-        BRANCH: student.branch,
-        AVERAGECGPA: student.averageCGPA
-    }))
-    res.status(200).json(average);
+    const total = students.reduce((sum,student)=>{
+        return sum + student.cgpa
+    },0)
+    const avg = total / students.length;
+    res.status(200).json(avg);
 });
 
 app.get("/students/count", (req, res) => {
     if (!students) {
-        res.status(404).json({ message: "Student Not Found" })
+        return res.status(404).json({ message: "Student Not Found" })
     }
 
     const student = students.length;
@@ -135,7 +133,7 @@ app.get("/students/:id", (req, res) => {
     console.log(student);
 
     if (!student) {
-        res.status(404).json({ message: "Student Not Found" })
+        return res.status(404).json({ message: "Student Not Found" })
     }
 
     res.status(200).json(student);
