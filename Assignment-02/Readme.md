@@ -35,8 +35,8 @@
 
 ## Postman Link
 
-    => 
+    => https://documenter.getpostman.com/view/50840969/2sBXcGEzXE
 
 ## Deployed Link
 
-=> 
+=> https://e-commerce-api-server-qt8n.onrender.com
