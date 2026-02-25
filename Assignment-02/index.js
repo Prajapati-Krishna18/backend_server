@@ -48,7 +48,7 @@ const products = [
 ];
 
 app.get("/", (req, res) => {
-    res.send("Server is running");
+    res.send("Assignment-02");
 });
 
 app.get("/products", (req, res) => {
