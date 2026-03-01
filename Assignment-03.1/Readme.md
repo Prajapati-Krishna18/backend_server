@@ -50,8 +50,8 @@
 
 ## Postman Link
 
-    => 
+    => https://documenter.getpostman.com/view/50840969/2sBXcHievy
 
 ## Deployed Link
 
-=> 
+=> https://statistics-management-api-server.onrender.com
